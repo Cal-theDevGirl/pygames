@@ -3,7 +3,10 @@ import time
 import random
  
 pygame.init()
+# Create a button for the settings menu
+settings_button = pygame.Button('Settings')
 
+#Settings menu
 def settings_menu():
   # Create a new window for the settings menu
   menu_window = pygame.display.set_mode((300, 300))
