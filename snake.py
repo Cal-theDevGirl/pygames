@@ -62,7 +62,8 @@ dis_height = 400
 
 dis = pygame.display.set_mode((dis_width, dis_height))
 pygame.display.set_caption('SDL Snake')
-
+settings_button = pygame.Button('Settings')
+settings_button.draw()
 clock = pygame.time.Clock()
  
 snake_block = 10
