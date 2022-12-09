@@ -38,6 +38,9 @@ def settings_menu():
                 blue = bg_color_input.value
                 pygame.display.quit()
                 break
+            elif event.type == pygame.MOUSEBUTTONDOWN and settings_button.collidepoint(event.pos):
+                settings_menu()
+            settings_button.draw()
         #Draw input fields, save button, and settings button on screen
         speed_input.draw()
         snake_color_input.draw()
@@ -59,7 +62,7 @@ dis_height = 400
 
 dis = pygame.display.set_mode((dis_width, dis_height))
 pygame.display.set_caption('SDL Snake')
- 
+
 clock = pygame.time.Clock()
  
 snake_block = 10
