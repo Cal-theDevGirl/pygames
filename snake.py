@@ -4,6 +4,12 @@ import random
  
 pygame.init()
 
+#Create a button for the settings menu
+settings_button = pygame.Button('Settings')
+
+#Displays Settings button on the game display
+settings_button.draw()
+
 #Settings menu
 def settings_menu():
   # Create a new window for the settings menu
@@ -14,16 +20,16 @@ def settings_menu():
   speed_input = pygame.input.Input()
   snake_color_input = pygame.input.Input()
   bg_color_input = pygame.input.Input()
-  #Create a button for the settings menu
-  settings_button = pygame.Button('Settings')
-  #Displays Settings button on the game display
-  settings_button.draw()
+  
+  #creats event call for settings button
   for event in pygame.event.get():
     if event.type == pygame.MOUSEBUTTONDOWN and settings_button.collidepoint(event.pos):
       # If the user clicks the settings button, open the settings menu
       settings_menu()
+  
   # Create a "save" button
   save_button = pygame.Button('Save')
+ 
   # Create a loop to display the settings menu and handle user input
   while True:
     menu_window.fill((255, 255, 255))  # Set the background color to white
