@@ -4,9 +4,45 @@ import random
  
 pygame.init()
 
+def settings_menu():
+  # Create a new window for the settings menu
+  menu_window = pygame.display.set_mode((300, 300))
+  pygame.display.set_caption('Settings')
 
+  # Create input fields for the snake's speed and color
+  speed_input = pygame.input.Input()
+  snake_color_input = pygame.input.Input()
+  bg_color_input = pygame.input.Input()
 
+  # Create a "save" button
+  save_button = pygame.Button('Save')
 
+  # Create a loop to display the settings menu and handle user input
+  while True:
+    menu_window.fill((255, 255, 255))  # Set the background color to white
+    for event in pygame.event.get():
+      if event.type == pygame.QUIT:  # Close the window if the user clicks the X button
+        pygame.quit()
+        quit()
+      elif event.type == pygame.MOUSEBUTTONDOWN and save_button.collidepoint(event.pos):
+        # If the user clicks the save button, update the game's settings and close the menu window
+        global speed
+        speed = speed_input.value
+        global white
+        white = snake_color_input.value
+        global blue
+        blue = bg_color_input.value
+        pygame.display.quit()
+        break
+
+    # Draw the input fields and the save button on the screen
+    speed_input.draw()
+    snake_color_input.draw()
+    bg_color_input.draw()
+    save_button.draw()
+    pygame.display.update()
+
+#game code
 white = (255, 255, 255)
 yellow = (255, 255, 102)
 black = (0, 0, 0)
