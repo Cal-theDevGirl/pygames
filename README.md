@@ -14,9 +14,11 @@
 
 <strong><p>Step 2<p/><strong/>
 <p>Next we have to install pip to do so open the terminal/command prompt on your os and type this:<p/>
+
 ```
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 ```
+
 <p>Then type:<p/>
 
 ```
@@ -25,9 +27,11 @@ python get-pip.py
 
 <strong><p>Step 3<p/><strong/>
 <p>Next we have to install pygame to do so type this<p/>
+
 ```
 pip install pygame
 ```
+
 <p>in your command prompt/terminal<p/>
 
 <p>Now you are done, to run the games download the game that you want then open command prompt and drag the file their, then hit the ENTER/RETURN key<p/>
