@@ -3,6 +3,7 @@ import time
 import random
  
 pygame.init()
+
 #Settings menu
 def settings_menu():
   # Create a new window for the settings menu
@@ -15,6 +16,8 @@ def settings_menu():
   bg_color_input = pygame.input.Input()
   #Create a button for the settings menu
   settings_button = pygame.Button('Settings')
+  #Displays Settings button on the game display
+  settings_button.draw()
   for event in pygame.event.get():
     if event.type == pygame.MOUSEBUTTONDOWN and settings_button.collidepoint(event.pos):
       # If the user clicks the settings button, open the settings menu
